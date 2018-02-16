@@ -2,6 +2,7 @@
 Spring boot application with Mongo
 
 Step 1: Install MongoDb using installer
+
 Step 2: Setup a configuration file for environment - mongod.cfg ; Below directories has to be created first
 
  systemLog:
@@ -18,3 +19,4 @@ Step 4: Connect with shell
      
 	 C:\Program Files\MongoDB\Server\3.6\bin\mongo.exe
        
+Using Spring mongotemplate 
