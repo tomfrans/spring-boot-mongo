@@ -1,5 +1,6 @@
 package com.frans.mongo.repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
@@ -11,5 +12,9 @@ import com.frans.mongo.dto.Event;
 public interface EventsRepository extends MongoRepository<Event,String>{
 
 	 public List<Event> findByCategoryName(String categoryName);
+	 
+	 public List<Event> findByStartDate(LocalDateTime eventDate);
+	 
+	 public List<Event> findByStartDateAndCategoryName(LocalDateTime eventDate,String categoryName);
 }
 
