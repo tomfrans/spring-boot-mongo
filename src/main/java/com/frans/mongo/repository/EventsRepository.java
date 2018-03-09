@@ -16,5 +16,7 @@ public interface EventsRepository extends MongoRepository<Event,String>{
 	 public List<Event> findByStartDate(LocalDateTime eventDate);
 	 
 	 public List<Event> findByStartDateAndCategoryName(LocalDateTime eventDate,String categoryName);
+	 
+	 public Event findByKey(String key);
 }
 

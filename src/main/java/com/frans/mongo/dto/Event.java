@@ -2,12 +2,15 @@ package com.frans.mongo.dto;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import org.springframework.data.annotation.Id;
+import org.springframework.hateoas.ResourceSupport;
 
-
-public class Event {
+@XmlRootElement(name = "Event")
+public class Event extends ResourceSupport{
     @Id
-	private String id;
+	private String key;
 	private Date startDate;
 	private Date endDate;
 	private String periodShort;
@@ -130,11 +133,11 @@ public class Event {
 	public void setTicketingUrl(String ticketingUrl) {
 		this.ticketingUrl = ticketingUrl;
 	}
-	public String getId() {
-		return id;
+	public String getKey() {
+		return key;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setId(String key) {
+		this.key = key;
 	}
 	public String getParentCompanyID() {
 		return parentCompanyID;
@@ -333,7 +336,7 @@ public class Event {
 		result = prime * result + ((geolocation == null) ? 0 : geolocation.hashCode());
 		result = prime * result + ((hours == null) ? 0 : hours.hashCode());
 		result = prime * result + ((iconPath == null) ? 0 : iconPath.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((key == null) ? 0 : key.hashCode());
 		result = prime * result + ((imagePath == null) ? 0 : imagePath.hashCode());
 		result = prime * result + ((info == null) ? 0 : info.hashCode());
 		result = prime * result + ((infoLink == null) ? 0 : infoLink.hashCode());
@@ -463,10 +466,10 @@ public class Event {
 				return false;
 		} else if (!iconPath.equals(other.iconPath))
 			return false;
-		if (id == null) {
-			if (other.id != null)
+		if (key == null) {
+			if (other.key != null)
 				return false;
-		} else if (!id.equals(other.id))
+		} else if (!key.equals(other.key))
 			return false;
 		if (imagePath == null) {
 			if (other.imagePath != null)
@@ -590,7 +593,7 @@ public class Event {
 		return "Event [startDate=" + startDate + ", endDate=" + endDate + ", periodShort=" + periodShort + ", time="
 				+ time + ", periodLong=" + periodLong + ", audience=" + audience + ", admission=" + admission
 				+ ", info=" + info + ", infoLink=" + infoLink + ", duration=" + duration + ", featured=" + featured
-				+ ", mapPinIcon=" + mapPinIcon + ", ticketingUrl=" + ticketingUrl + ", id=" + id + ", parentCompanyID="
+				+ ", mapPinIcon=" + mapPinIcon + ", ticketingUrl=" + ticketingUrl + ", key=" + key + ", parentCompanyID="
 				+ parentCompanyID + ", type=" + type + ", lang=" + lang + ", lastModified=" + lastModified
 				+ ", shareUri=" + shareUri + ", title=" + title + ", categoryId=" + categoryId + ", categoryName="
 				+ categoryName + ", categoryKey=" + categoryKey + ", categoryIcon=" + categoryIcon
