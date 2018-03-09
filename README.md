@@ -19,4 +19,7 @@ Step 4: Connect with shell
      
 	 C:\Program Files\MongoDB\Server\3.6\bin\mongo.exe
        
-Using Spring mongotemplate 
+APIs are updated with HATEOAS support 
+
+
+
