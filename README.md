@@ -21,5 +21,7 @@ Step 4: Connect with shell
        
 APIs are updated with HATEOAS support 
 
+Integration and DataMongoTest test cases added
+
 
 
